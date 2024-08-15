@@ -5,7 +5,7 @@ class CityService {
         this.cityRepository = new CityRepository();
     }
 
-    async createCity() {
+    async createCity(data) {
         try {
             const city = await this.cityRepository.createCity(data);
             return city;
@@ -42,4 +42,7 @@ class CityService {
     }
 
 
+    
 }
+
+module.exports = CityService;
