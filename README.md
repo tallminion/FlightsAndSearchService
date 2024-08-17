@@ -24,7 +24,7 @@
 }
 ```
 - once you've added DB config as listed above, goto src folder and execute `npx sequelize db:create`
-and then execute `npx sequelize db:migrate`
+and then execute `npx sequelize db:migrate`, To undo a migration execute `npx sequelize db:migrate:undo`
 ```
  
 
