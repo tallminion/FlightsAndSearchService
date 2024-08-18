@@ -43,5 +43,10 @@ and then execute `npx sequelize db:migrate`, To undo a migration execute `npx se
     ### City -> id, name, create_at, updated_at
     ### Airport -> id, name, address, city_id, created_at, updated_at
         Relationship -> City has many airports and Airport belongs to a city (One to many) 
+```
+To create Airports model, execute ` npx sequelize model:generate --name Airport --attributes name:String,address:String,city_Id :integer` inside `src/`.
+```
+
+  
 
      
