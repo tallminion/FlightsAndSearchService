@@ -38,9 +38,17 @@ and then execute `npx sequelize db:migrate`, To undo a migration execute `npx se
   - A city has many airports but one airport belongs to acity.
   - An airport can have many flights, but a flight belongs to an airport.
 
+<<<<<<< HEAD
   ## Tables
 
 ### City -> id, name, create_at, updated_at
 ### Airport -> id, name, address, city_id, created_at, updated_at
     Relationship -> City has many airports and Airport belongs to a city (One to many) 
+=======
+ ## Tables
+
+    ### City -> id, name, create_at, updated_at
+    ### Airport -> id, name, address, city_id, created_at, updated_at
+        Relationship -> City has many airports and Airport belongs to a city (One to many) 
+>>>>>>> 198b570 (tables updated in README)
      
