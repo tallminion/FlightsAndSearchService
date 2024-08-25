@@ -1,13 +1,12 @@
 const express = require("express");
-const { PORT } = require("./config/serverConfig");
 const bodyParser = require("body-parser");
+
+const { PORT } = require("./config/serverConfig");
 const ApiRoutes = require('./routes/index');
 
-const {Airport, City} = require('./models/index');
 const { sequelize } = require("sequelize");
 
 const db = require('./models/index');
-const airport = require("./models/airport");
 
 const setupAndStartServer = async () => {
     const app = express();
