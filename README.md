@@ -25,9 +25,8 @@
 ```
 - once you've added DB config as listed above, goto src folder and execute `npx sequelize db:create`
 and then execute `npx sequelize db:migrate`, To undo a migration execute `npx sequelize db:migrate:undo`
-```
- 
 
+```
  ## DB design
   - Airport Table
   - Flight
@@ -44,8 +43,12 @@ and then execute `npx sequelize db:migrate`, To undo a migration execute `npx se
     ### Airport -> id, name, address, city_id, created_at, updated_at
         Relationship -> City has many airports and Airport belongs to a city (One to many) 
 ```
-To create Airports model, execute ` npx sequelize model:generate --name Airport --attributes name:String,address:String,city_Id :integer` inside `src/`.
-```
+- To create Airports model, execute ` npx sequelize model:generate --name Airport --attributes name:String,address:String,city_Id :integer` inside `src/`.
+
+- To create a seeder: `npx sequelize seed:generate --name <seeder-name>`
+
+- To run all seeders: `npx sequelize db:seed:all`
+
 
   
 
