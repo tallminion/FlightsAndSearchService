@@ -4,13 +4,15 @@ const { Flights } = require('../models/index');
 class FlightRepository{
 
     #createFilter(data){
-        let filter = {};
-        if(data.arrivalAirportId){
-            filter.arrivalAirportId = data.arrivalAirportId;
-        }
-        if(data.departureAirportId){
-            filter.departureAirportId = data.departureAirportId;
-        }
+        let filter = {...data};
+        // if(data.arrivalAirportId){
+        //     filter.arrivalAirportId = data.arrivalAirportId;
+        // }
+        // if(data.departureAirportId){
+        //     filter.departureAirportId = data.departureAirportId;
+        // }
+        // above if's can be avoided by using destructiuring of data by ...data in filter
+        
         // if(data.minPrice){
         //     Object.assign(filter, {price: {[Op.gte]: data.minPrice}});
         // }
